@@ -6,6 +6,7 @@ let package = Package(
     name: "HotwireNative",
     platforms: [
         .iOS(.v14),
+        .macOS(.v11)
     ],
     products: [
         .library(
