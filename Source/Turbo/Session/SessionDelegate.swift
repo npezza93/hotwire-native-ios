@@ -1,4 +1,6 @@
-import UIKit
+#if canImport(UIKit)
+  import UIKit
+#endif
 
 public protocol SessionDelegate: AnyObject {
     func session(_ session: Session, didProposeVisit proposal: VisitProposal)

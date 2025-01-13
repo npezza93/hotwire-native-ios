@@ -1,4 +1,6 @@
-import UIKit
+#if canImport(UIKit)
+  import UIKit
+#endif
 
 /// As a convenience, a view controller may conform to `PathConfigurationIdentifiable`.
 ///

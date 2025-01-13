@@ -1,6 +1,8 @@
 import Foundation
 import SafariServices
-import UIKit
+#if canImport(UIKit)
+  import UIKit
+#endif
 import WebKit
 
 class DefaultNavigatorDelegate: NSObject, NavigatorDelegate {}
@@ -19,7 +21,7 @@ public class Navigator {
         }
         return modalSession.webView
     }
-    
+
     /// Set to handle customize behavior of the `WKUIDelegate`.
     ///
     /// Subclass `WKUIController` to add additional behavior alongside alert/confirm dialogs.
@@ -242,7 +244,7 @@ extension Navigator: NavigationHierarchyControllerDelegate {
         case .modal: modalSession.visit(controller, options: options)
         }
     }
-    
+
     func refreshVisitable(navigationStack: NavigationHierarchyController.NavigationStackType, newTopmostVisitable: any Visitable) {
         switch navigationStack {
         case .main:

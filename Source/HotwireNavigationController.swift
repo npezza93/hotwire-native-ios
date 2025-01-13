@@ -1,4 +1,6 @@
-import UIKit
+#if canImport(UIKit)
+  import UIKit
+#endif
 
 /// The `HotwireNavigationController` is a custom subclass of `UINavigationController` designed to enhance the management of `VisitableViewController` instances within a navigation stack.
 /// It tracks the reasons why a view controller appears or disappears, which is crucial for handling navigation in Hotwire-powered applications.

@@ -1,4 +1,7 @@
-import UIKit
+#if canImport(UIKit)
+  import UIKit
+#endif
+
 import WebKit
 
 public struct HotwireConfig {
@@ -69,11 +72,11 @@ public struct HotwireConfig {
 
     public func makeWebView() -> WKWebView {
         let webView = makeCustomWebView(makeWebViewConfiguration())
-        
+
         if !Hotwire.bridgeComponentTypes.isEmpty {
             Bridge.initialize(webView)
         }
-        
+
         return webView
     }
 

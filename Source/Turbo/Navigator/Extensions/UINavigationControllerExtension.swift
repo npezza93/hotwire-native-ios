@@ -1,4 +1,6 @@
-import UIKit
+#if canImport(UIKit)
+  import UIKit
+#endif
 
 extension UINavigationController {
     func replaceLastViewController(with viewController: UIViewController) {

@@ -1,5 +1,7 @@
 import SafariServices
-import UIKit
+#if canImport(UIKit)
+  import UIKit
+#endif
 import WebKit
 
 class NavigationHierarchyController {
@@ -197,7 +199,7 @@ class NavigationHierarchyController {
         navigationController.dismiss(animated: proposal.animated)
         navigationController.setViewControllers([controller], animated: proposal.animated)
     }
-    
+
     private func refreshIfTopViewControllerIsVisitable(from stack: NavigationStackType) {
         if let navControllerTopmostVisitable = navController(for: stack).topViewController as? Visitable {
             delegate.refreshVisitable(navigationStack: stack,

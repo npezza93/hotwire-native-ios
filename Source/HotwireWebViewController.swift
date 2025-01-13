@@ -1,4 +1,6 @@
-import UIKit
+#if canImport(UIKit)
+  import UIKit
+#endif
 import WebKit
 
 /// A base controller to use or subclass that handles bridge lifecycle callbacks.

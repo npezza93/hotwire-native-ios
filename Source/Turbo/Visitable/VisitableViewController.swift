@@ -1,4 +1,6 @@
-import UIKit
+#if canImport(UIKit)
+  import UIKit
+#endif
 import WebKit
 
 open class VisitableViewController: UIViewController, Visitable {

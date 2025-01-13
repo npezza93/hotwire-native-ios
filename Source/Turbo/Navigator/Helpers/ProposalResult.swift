@@ -1,4 +1,6 @@
-import UIKit
+#if canImport(UIKit)
+  import UIKit
+#endif
 
 /// Return from `NavigatorDelegate.handle(proposal:)` to route a custom controller.
 public enum ProposalResult: Equatable {
